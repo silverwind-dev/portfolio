@@ -31,7 +31,7 @@
 
   <!-- Header / Navigation -->
   <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm"
-    style="background-color: rgba(var(--bg-primary-rgb), 0.5);">
+    style="background-color: rgba(var(--bg-primary-rgb), 0.8);">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
@@ -56,22 +56,22 @@
           </svg>
         </button>
       </div>
-
-      <!-- Mobile menu -->
-      <div id="mobile-menu"
-        class="md:hidden absolute top-16 left-0 right-0 opacity-0 invisible transition-all duration-300"
-        style="background-color: var(--bg-primary); border-top: 1px solid var(--bg-secondary);">
-        <div class="px-4 py-4 space-y-4">
-          <a href="#about" class="mobile-nav-link block py-2 font-medium" style="color: var(--text-secondary);">Обо
-            мне</a>
-          <a href="#portfolio" class="mobile-nav-link block py-2 font-medium"
-            style="color: var(--text-secondary);">Портфолио</a>
-          <a href="#contact" class="mobile-nav-link block py-2 font-medium"
-            style="color: var(--text-secondary);">Контакты</a>
-        </div>
-      </div>
     </nav>
   </header>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu"
+    class="md:hidden fixed top-16 left-0 right-0 opacity-0 invisible transition-all duration-300 backdrop-blur-sm"
+    style="z-index: 1; background-color: rgba(var(--bg-primary-rgb), 0.8); border-top: 1px solid var(--bg-secondary);">
+    <div class="px-4 py-4 space-y-4">
+      <a href="#about" class="mobile-nav-link block py-2 font-medium" style="color: var(--text-secondary);">Обо
+        мне</a>
+      <a href="#portfolio" class="mobile-nav-link block py-2 font-medium"
+        style="color: var(--text-secondary);">Портфолио</a>
+      <a href="#contact" class="mobile-nav-link block py-2 font-medium"
+        style="color: var(--text-secondary);">Контакты</a>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">

@@ -957,10 +957,6 @@ body {
   border-top-width: 1px;
 }
 
-.bg-opacity-50 {
-  --tw-bg-opacity: 0.5;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
