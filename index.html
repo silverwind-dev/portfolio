@@ -30,8 +30,8 @@
   <div class="read-progress"></div>
 
   <!-- Header / Navigation -->
-  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-opacity-80"
-    style="background-color: var(--bg-primary);">
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm"
+    style="background-color: rgba(var(--bg-primary-rgb), 0.5);">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
@@ -58,12 +58,16 @@
       </div>
 
       <!-- Mobile menu -->
-      <div id="mobile-menu" class="md:hidden absolute top-16 left-0 right-0 opacity-0 invisible transition-all duration-300"
+      <div id="mobile-menu"
+        class="md:hidden absolute top-16 left-0 right-0 opacity-0 invisible transition-all duration-300"
         style="background-color: var(--bg-primary); border-top: 1px solid var(--bg-secondary);">
         <div class="px-4 py-4 space-y-4">
-          <a href="#about" class="mobile-nav-link block py-2 font-medium" style="color: var(--text-secondary);">Обо мне</a>
-          <a href="#portfolio" class="mobile-nav-link block py-2 font-medium" style="color: var(--text-secondary);">Портфолио</a>
-          <a href="#contact" class="mobile-nav-link block py-2 font-medium" style="color: var(--text-secondary);">Контакты</a>
+          <a href="#about" class="mobile-nav-link block py-2 font-medium" style="color: var(--text-secondary);">Обо
+            мне</a>
+          <a href="#portfolio" class="mobile-nav-link block py-2 font-medium"
+            style="color: var(--text-secondary);">Портфолио</a>
+          <a href="#contact" class="mobile-nav-link block py-2 font-medium"
+            style="color: var(--text-secondary);">Контакты</a>
         </div>
       </div>
     </nav>
@@ -179,157 +183,165 @@
       </p>
 
       <!-- Slider -->
-      <div class="slider animate-scale-in">
-        <!-- Project 1 -->
-        <div class="slide">
-          <div class="card h-full">
-            <div class="aspect-video rounded-lg mb-6 overflow-hidden"
-              style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);">
-              <div class="w-full h-full flex items-center justify-center text-6xl">
-                🛒
+      <div class="slider-wrapper">
+        <button class="slider-btn slider-btn-prev" aria-label="Предыдущий проект">
+          ←
+        </button>
+
+        <div class="slider animate-scale-in">
+          <!-- Project 1 -->
+          <div class="slide">
+            <div class="card h-full">
+              <div class="aspect-video rounded-lg mb-6 overflow-hidden"
+                style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);">
+                <div class="w-full h-full flex items-center justify-center text-6xl">
+                  🛒
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
+                E-commerce Platform
+              </h3>
+
+              <p class="mb-4" style="color: var(--text-secondary);">
+                Полноценная платформа для онлайн-торговли с админ-панелью,
+                интеграцией платежей и системой управления заказами.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="skill-tag text-xs">React</span>
+                <span class="skill-tag text-xs">Node.js</span>
+                <span class="skill-tag text-xs">PostgreSQL</span>
+                <span class="skill-tag text-xs">Stripe</span>
+              </div>
+
+              <div class="flex gap-4">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  Демо →
+                </a>
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  GitHub →
+                </a>
               </div>
             </div>
+          </div>
 
-            <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
-              E-commerce Platform
-            </h3>
+          <!-- Project 2 -->
+          <div class="slide">
+            <div class="card h-full">
+              <div class="aspect-video rounded-lg mb-6 overflow-hidden"
+                style="background: linear-gradient(135deg, #10b981, #3b82f6);">
+                <div class="w-full h-full flex items-center justify-center text-6xl">
+                  📊
+                </div>
+              </div>
 
-            <p class="mb-4" style="color: var(--text-secondary);">
-              Полноценная платформа для онлайн-торговли с админ-панелью,
-              интеграцией платежей и системой управления заказами.
-            </p>
+              <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
+                Analytics Dashboard
+              </h3>
 
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="skill-tag text-xs">React</span>
-              <span class="skill-tag text-xs">Node.js</span>
-              <span class="skill-tag text-xs">PostgreSQL</span>
-              <span class="skill-tag text-xs">Stripe</span>
+              <p class="mb-4" style="color: var(--text-secondary);">
+                Интерактивная панель аналитики с визуализацией данных в реальном времени,
+                экспортом отчётов и гибкой настройкой виджетов.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="skill-tag text-xs">Vue.js</span>
+                <span class="skill-tag text-xs">D3.js</span>
+                <span class="skill-tag text-xs">WebSocket</span>
+                <span class="skill-tag text-xs">Redis</span>
+              </div>
+
+              <div class="flex gap-4">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  Демо →
+                </a>
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  GitHub →
+                </a>
+              </div>
             </div>
+          </div>
 
-            <div class="flex gap-4">
-              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
-                Демо →
-              </a>
-              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
-                GitHub →
-              </a>
+          <!-- Project 3 -->
+          <div class="slide">
+            <div class="card h-full">
+              <div class="aspect-video rounded-lg mb-6 overflow-hidden"
+                style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+                <div class="w-full h-full flex items-center justify-center text-6xl">
+                  📱
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
+                Task Management App
+              </h3>
+
+              <p class="mb-4" style="color: var(--text-secondary);">
+                Приложение для управления задачами с поддержкой командной работы,
+                уведомлениями и интеграцией с календарём.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="skill-tag text-xs">Next.js</span>
+                <span class="skill-tag text-xs">Prisma</span>
+                <span class="skill-tag text-xs">MongoDB</span>
+                <span class="skill-tag text-xs">Pusher</span>
+              </div>
+
+              <div class="flex gap-4">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  Демо →
+                </a>
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  GitHub →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="slide">
+            <div class="card h-full">
+              <div class="aspect-video rounded-lg mb-6 overflow-hidden"
+                style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">
+                <div class="w-full h-full flex items-center justify-center text-6xl">
+                  🎨
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
+                Design System
+              </h3>
+
+              <p class="mb-4" style="color: var(--text-secondary);">
+                Комплексная дизайн-система с библиотекой компонентов,
+                документацией и инструментами для дизайнеров и разработчиков.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="skill-tag text-xs">Storybook</span>
+                <span class="skill-tag text-xs">React</span>
+                <span class="skill-tag text-xs">TypeScript</span>
+                <span class="skill-tag text-xs">Figma</span>
+              </div>
+
+              <div class="flex gap-4">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  Демо →
+                </a>
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  GitHub →
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="slide">
-          <div class="card h-full">
-            <div class="aspect-video rounded-lg mb-6 overflow-hidden"
-              style="background: linear-gradient(135deg, #10b981, #3b82f6);">
-              <div class="w-full h-full flex items-center justify-center text-6xl">
-                📊
-              </div>
-            </div>
-
-            <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
-              Analytics Dashboard
-            </h3>
-
-            <p class="mb-4" style="color: var(--text-secondary);">
-              Интерактивная панель аналитики с визуализацией данных в реальном времени,
-              экспортом отчётов и гибкой настройкой виджетов.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="skill-tag text-xs">Vue.js</span>
-              <span class="skill-tag text-xs">D3.js</span>
-              <span class="skill-tag text-xs">WebSocket</span>
-              <span class="skill-tag text-xs">Redis</span>
-            </div>
-
-            <div class="flex gap-4">
-              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
-                Демо →
-              </a>
-              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
-                GitHub →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="slide">
-          <div class="card h-full">
-            <div class="aspect-video rounded-lg mb-6 overflow-hidden"
-              style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
-              <div class="w-full h-full flex items-center justify-center text-6xl">
-                📱
-              </div>
-            </div>
-
-            <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
-              Task Management App
-            </h3>
-
-            <p class="mb-4" style="color: var(--text-secondary);">
-              Приложение для управления задачами с поддержкой командной работы,
-              уведомлениями и интеграцией с календарём.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="skill-tag text-xs">Next.js</span>
-              <span class="skill-tag text-xs">Prisma</span>
-              <span class="skill-tag text-xs">MongoDB</span>
-              <span class="skill-tag text-xs">Pusher</span>
-            </div>
-
-            <div class="flex gap-4">
-              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
-                Демо →
-              </a>
-              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
-                GitHub →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="slide">
-          <div class="card h-full">
-            <div class="aspect-video rounded-lg mb-6 overflow-hidden"
-              style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">
-              <div class="w-full h-full flex items-center justify-center text-6xl">
-                🎨
-              </div>
-            </div>
-
-            <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
-              Design System
-            </h3>
-
-            <p class="mb-4" style="color: var(--text-secondary);">
-              Комплексная дизайн-система с библиотекой компонентов,
-              документацией и инструментами для дизайнеров и разработчиков.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="skill-tag text-xs">Storybook</span>
-              <span class="skill-tag text-xs">React</span>
-              <span class="skill-tag text-xs">TypeScript</span>
-              <span class="skill-tag text-xs">Figma</span>
-            </div>
-
-            <div class="flex gap-4">
-              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
-                Демо →
-              </a>
-              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
-                GitHub →
-              </a>
-            </div>
-          </div>
-        </div>
+        <button class="slider-btn slider-btn-next" aria-label="Следующий проект">
+          →
+        </button>
       </div>
-
-      <!-- Slider hint -->
       <p class="text-center mt-8 text-sm" style="color: var(--text-secondary);">
         ← Листайте вправо, чтобы увидеть больше проектов →
       </p>
@@ -441,7 +453,7 @@
 
     function toggleMenu() {
       isMenuOpen = !isMenuOpen;
-      
+
       if (isMenuOpen) {
         mobileMenu.classList.remove('opacity-0', 'invisible');
         mobileMenu.classList.add('opacity-100', 'visible');
@@ -470,6 +482,33 @@
         toggleMenu();
       }
     });
+
+    const portfolioSlider = document.querySelector('.slider');
+    const prevBtn = document.querySelector('.slider-btn-prev');
+    const nextBtn = document.querySelector('.slider-btn-next');
+
+    const scrollSlider = (direction) => {
+      if (!portfolioSlider) return;
+      const amount = portfolioSlider.clientWidth * 0.8;
+      portfolioSlider.scrollBy({ left: direction * amount, behavior: 'smooth' });
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => scrollSlider(-1));
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => scrollSlider(1));
+    }
+
+    if (portfolioSlider) {
+      portfolioSlider.addEventListener('wheel', (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          e.preventDefault();
+          portfolioSlider.scrollLeft += e.deltaY;
+        }
+      }, { passive: false });
+    }
   </script>
 </body>
 
