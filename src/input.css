@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #1a1a1a;
+    --text-secondary: #4b5563;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: #111827;
+      --bg-secondary: #1f2937;
+      --text-primary: #f9fafb;
+      --text-secondary: #9ca3af;
+      --accent: #60a5fa;
+      --accent-hover: #3b82f6;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    background-color: var(--accent);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 rounded-lg font-medium border-2 transition-all duration-300;
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-center;
+    color: var(--text-primary);
+  }
+
+  .skill-tag {
+    @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-300;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+
+  .skill-tag:hover {
+    background-color: var(--accent);
+    color: white;
+  }
+
+  .card {
+    @apply rounded-xl p-6 transition-all duration-300;
+    background-color: var(--bg-secondary);
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-link {
+    @apply relative font-medium transition-colors duration-300;
+    color: var(--text-secondary);
+  }
+
+  .nav-link:hover {
+    color: var(--accent);
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300;
+    background-color: var(--accent);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--accent), #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-fade-up {
+    animation: fade-up linear forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+  }
+
+  .animate-scale-in {
+    animation: scale-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+
+  .animate-slide-left {
+    animation: slide-from-left linear forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 25%;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Progress bar */
+.read-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), #8b5cf6);
+  animation: progress linear;
+  animation-timeline: scroll(root);
+  z-index: 1000;
+}
+
+@keyframes progress {
+  to {
+    width: 100%;
+  }
+}
+
+/* Slider styles */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slide {
+    flex: 0 0 33.333%;
+  }
+}
+
+/* Parallax hero background */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  animation: parallax linear;
+  animation-timeline: scroll();
+  z-index: -1;
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(20%);
+  }
+}

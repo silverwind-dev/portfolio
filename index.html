@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Портфолио веб-разработчика. Fullstack разработка, современные технологии, качественные решения.">
+  <meta name="author" content="Web Developer">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Web Developer Portfolio">
+  <meta property="og:description" content="Портфолио веб-разработчика. Fullstack разработка, современные технологии.">
+  <meta property="og:type" content="website">
+  
+  <title>Web Developer | Портфолио</title>
+  
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="antialiased">
+  <!-- Progress bar -->
+  <div class="read-progress"></div>
+
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-opacity-80" style="background-color: var(--bg-primary);">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="#" class="text-xl font-bold text-gradient">
+          JD
+        </a>
+
+        <!-- Navigation links -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="nav-link">Обо мне</a>
+          <a href="#portfolio" class="nav-link">Портфолио</a>
+          <a href="#contact" class="nav-link">Контакты</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="md:hidden p-2" aria-label="Menu" style="color: var(--text-primary);">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <div class="hero-bg"></div>
+    
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <p class="text-lg md:text-xl mb-4 animate-fade-up" style="color: var(--accent);">
+        Привет, меня зовут
+      </p>
+      
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up" style="color: var(--text-primary);">
+        Джон Доу
+      </h1>
+      
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 animate-fade-up text-gradient">
+        Fullstack Developer
+      </h2>
+      
+      <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-up" style="color: var(--text-secondary);">
+        Создаю современные веб-приложения с чистым кодом и вниманием к деталям. 
+        Специализируюсь на JavaScript, React и Node.js.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up">
+        <a href="#contact" class="btn-primary">
+          Связаться
+        </a>
+        <a href="#portfolio" class="btn-outline">
+          Смотреть работы
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" style="color: var(--text-secondary);">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 md:py-32">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title animate-slide-left">
+        Обо мне
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Avatar / Image -->
+        <div class="order-2 md:order-1 animate-scale-in">
+          <div class="aspect-square rounded-2xl overflow-hidden" style="background: linear-gradient(135deg, var(--accent), #8b5cf6);">
+            <div class="w-full h-full flex items-center justify-center text-8xl">
+              👨‍💻
+            </div>
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <div class="order-1 md:order-2 animate-slide-left">
+          <p class="text-lg mb-6" style="color: var(--text-secondary);">
+            Более 5 лет разрабатываю веб-приложения различной сложности. 
+            Начинал с фронтенда, но со временем освоил полный стек технологий.
+          </p>
+          
+          <p class="text-lg mb-6" style="color: var(--text-secondary);">
+            Люблю решать сложные задачи и создавать продукты, которые приносят пользу людям. 
+            Постоянно изучаю новые технологии и следую лучшим практикам разработки.
+          </p>
+          
+          <p class="text-lg mb-8" style="color: var(--text-secondary);">
+            В свободное время вношу вклад в open-source проекты и пишу технические статьи.
+          </p>
+
+          <!-- Skills -->
+          <h3 class="text-xl font-semibold mb-4" style="color: var(--text-primary);">
+            Ключевые навыки
+          </h3>
+          
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-tag">JavaScript / TypeScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">GraphQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 md:py-32" style="background-color: var(--bg-secondary);">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title animate-slide-left">
+        Портфолио
+      </h2>
+      
+      <p class="text-center mb-12 animate-fade-up" style="color: var(--text-secondary);">
+        Избранные проекты над которыми я работал
+      </p>
+
+      <!-- Slider -->
+      <div class="slider animate-scale-in">
+        <!-- Project 1 -->
+        <div class="slide">
+          <div class="card h-full">
+            <div class="aspect-video rounded-lg mb-6 overflow-hidden" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);">
+              <div class="w-full h-full flex items-center justify-center text-6xl">
+                🛒
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
+              E-commerce Platform
+            </h3>
+            
+            <p class="mb-4" style="color: var(--text-secondary);">
+              Полноценная платформа для онлайн-торговли с админ-панелью, 
+              интеграцией платежей и системой управления заказами.
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="skill-tag text-xs">React</span>
+              <span class="skill-tag text-xs">Node.js</span>
+              <span class="skill-tag text-xs">PostgreSQL</span>
+              <span class="skill-tag text-xs">Stripe</span>
+            </div>
+            
+            <div class="flex gap-4">
+              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                Демо →
+              </a>
+              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="slide">
+          <div class="card h-full">
+            <div class="aspect-video rounded-lg mb-6 overflow-hidden" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
+              <div class="w-full h-full flex items-center justify-center text-6xl">
+                📊
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
+              Analytics Dashboard
+            </h3>
+            
+            <p class="mb-4" style="color: var(--text-secondary);">
+              Интерактивная панель аналитики с визуализацией данных в реальном времени, 
+              экспортом отчётов и гибкой настройкой виджетов.
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="skill-tag text-xs">Vue.js</span>
+              <span class="skill-tag text-xs">D3.js</span>
+              <span class="skill-tag text-xs">WebSocket</span>
+              <span class="skill-tag text-xs">Redis</span>
+            </div>
+            
+            <div class="flex gap-4">
+              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                Демо →
+              </a>
+              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="slide">
+          <div class="card h-full">
+            <div class="aspect-video rounded-lg mb-6 overflow-hidden" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+              <div class="w-full h-full flex items-center justify-center text-6xl">
+                📱
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
+              Task Management App
+            </h3>
+            
+            <p class="mb-4" style="color: var(--text-secondary);">
+              Приложение для управления задачами с поддержкой командной работы, 
+              уведомлениями и интеграцией с календарём.
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="skill-tag text-xs">Next.js</span>
+              <span class="skill-tag text-xs">Prisma</span>
+              <span class="skill-tag text-xs">MongoDB</span>
+              <span class="skill-tag text-xs">Pusher</span>
+            </div>
+            
+            <div class="flex gap-4">
+              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                Демо →
+              </a>
+              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="slide">
+          <div class="card h-full">
+            <div class="aspect-video rounded-lg mb-6 overflow-hidden" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">
+              <div class="w-full h-full flex items-center justify-center text-6xl">
+                🎨
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
+              Design System
+            </h3>
+            
+            <p class="mb-4" style="color: var(--text-secondary);">
+              Комплексная дизайн-система с библиотекой компонентов, 
+              документацией и инструментами для дизайнеров и разработчиков.
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="skill-tag text-xs">Storybook</span>
+              <span class="skill-tag text-xs">React</span>
+              <span class="skill-tag text-xs">TypeScript</span>
+              <span class="skill-tag text-xs">Figma</span>
+            </div>
+            
+            <div class="flex gap-4">
+              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                Демо →
+              </a>
+              <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider hint -->
+      <p class="text-center mt-8 text-sm" style="color: var(--text-secondary);">
+        ← Листайте вправо, чтобы увидеть больше проектов →
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 md:py-32">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title animate-slide-left">
+        Контакты
+      </h2>
+      
+      <p class="text-center mb-12 animate-fade-up" style="color: var(--text-secondary);">
+        Свяжитесь со мной для обсуждения проекта или сотрудничества
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Email -->
+        <a href="mailto:john.doe@example.com" class="card text-center group animate-scale-in">
+          <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            📧
+          </div>
+          <h3 class="text-lg font-semibold mb-2" style="color: var(--text-primary);">
+            Email
+          </h3>
+          <p style="color: var(--accent);">
+            john.doe@example.com
+          </p>
+        </a>
+
+        <!-- Telegram -->
+        <a href="https://t.me/johndoe" target="_blank" rel="noopener noreferrer" class="card text-center group animate-scale-in">
+          <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            ✈️
+          </div>
+          <h3 class="text-lg font-semibold mb-2" style="color: var(--text-primary);">
+            Telegram
+          </h3>
+          <p style="color: var(--accent);">
+            @johndoe
+          </p>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer" class="card text-center group animate-scale-in">
+          <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            🐙
+          </div>
+          <h3 class="text-lg font-semibold mb-2" style="color: var(--text-primary);">
+            GitHub
+          </h3>
+          <p style="color: var(--accent);">
+            github.com/johndoe
+          </p>
+        </a>
+      </div>
+
+      <!-- Additional links -->
+      <div class="flex justify-center gap-8 mt-12 animate-fade-up">
+        <a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer" 
+           class="font-medium hover:underline" style="color: var(--text-secondary);">
+          LinkedIn
+        </a>
+        <a href="#" class="font-medium hover:underline" style="color: var(--text-secondary);">
+          Резюме
+        </a>
+        <a href="#" class="font-medium hover:underline" style="color: var(--text-secondary);">
+          Блог
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t" style="border-color: var(--bg-secondary);">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm" style="color: var(--text-secondary);">
+          © 2024 John Doe. Все права защищены.
+        </p>
+        
+        <nav class="flex gap-6">
+          <a href="#about" class="text-sm hover:underline" style="color: var(--text-secondary);">
+            Обо мне
+          </a>
+          <a href="#portfolio" class="text-sm hover:underline" style="color: var(--text-secondary);">
+            Портфолио
+          </a>
+          <a href="#contact" class="text-sm hover:underline" style="color: var(--text-secondary);">
+            Контакты
+          </a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
