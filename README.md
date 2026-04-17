@@ -15,11 +15,12 @@
 portfolio/
 ├── index.html          # Главная страница
 ├── src/
-│   └── input.css       # Исходный CSS с директивами Tailwind
+│   └── css/
+│       └── input.css   # Исходный CSS с директивами Tailwind
 ├── dist/
-│   └── output.css      # Скомпилированный CSS
+│   └── output.css      # Скомпилированный CSS (минифицирован для продакшена)
 ├── tailwind.config.js  # Конфигурация Tailwind
-├── postcss.config.js   # Конфигурация PostCSS
+├── postcss.config.js   # Конфигурация PostCSS + cssnano
 ├── package.json
 ├── README.md           # Документация
 └── KODA.md             # Контекст проекта
@@ -42,9 +43,14 @@ npm run watch
 ## Сборка
 
 ```bash
-# Собрать CSS для продакшена
+# Собрать CSS для продакшена (с минификацией)
 npm run build
+
+# Или запустить watch-режим для разработки
+npm run watch
 ```
+
+**Примечание:** При сборке через `npm run build` CSS автоматически минифицируется с помощью `cssnano`.
 
 ## Запуск
 
@@ -98,7 +104,7 @@ python3 -m http.server 8080
 
 ### Цветовая палитра
 
-Измените CSS-переменные в `src/input.css`:
+Измените CSS-переменные в `src/css/input.css`:
 
 ```css
 :root {
