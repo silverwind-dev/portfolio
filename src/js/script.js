@@ -55,12 +55,3 @@ if (prevBtn) {
 if (nextBtn) {
   nextBtn.addEventListener('click', () => scrollSlider(1));
 }
-
-if (portfolioSlider) {
-  portfolioSlider.addEventListener('wheel', (e) => {
-    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-      e.preventDefault();
-      portfolioSlider.scrollLeft += e.deltaY;
-    }
-  }, { passive: false });
-}

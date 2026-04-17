@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:css": "./node_modules/.bin/tailwindcss -i ./src/input.css -o ./dist/output.css",
-    "watch:css": "./node_modules/.bin/tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:css": "./node_modules/.bin/tailwindcss -i ./src/css/input.css -o ./dist/output.css",
+    "watch:css": "./node_modules/.bin/tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch",
     "build": "npm run build:css",
     "watch": "npm run watch:css"
   },
