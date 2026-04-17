@@ -41,8 +41,8 @@
 
         <!-- Navigation links -->
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#about" class="nav-link">Обо мне</a>
           <a href="#portfolio" class="nav-link">Портфолио</a>
+          <a href="#about" class="nav-link">Обо мне</a>
           <a href="#contact" class="nav-link">Контакты</a>
         </div>
 
@@ -64,10 +64,10 @@
     class="md:hidden fixed top-16 left-0 right-0 opacity-0 invisible transition-all duration-300 backdrop-blur-sm"
     style="z-index: 1; background-color: rgba(var(--bg-primary-rgb), 0.8); border-top: 1px solid var(--bg-secondary);">
     <div class="px-4 py-4 space-y-4">
-      <a href="#about" class="mobile-nav-link block py-2 font-medium" style="color: var(--text-secondary);">Обо
-        мне</a>
       <a href="#portfolio" class="mobile-nav-link block py-2 font-medium"
         style="color: var(--text-secondary);">Портфолио</a>
+      <a href="#about" class="mobile-nav-link block py-2 font-medium" style="color: var(--text-secondary);">Обо
+        мне</a>
       <a href="#contact" class="mobile-nav-link block py-2 font-medium"
         style="color: var(--text-secondary);">Контакты</a>
     </div>
@@ -106,69 +106,12 @@
     </div>
 
     <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" style="color: var(--text-secondary);">
+    <a href="#portfolio" class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
+      style="color: var(--text-secondary);" title="Посмотреть портфолио">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
       </svg>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 md:py-32">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="section-title animate-slide-left">
-        Обо мне
-      </h2>
-
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Avatar / Image -->
-        <div class="order-2 md:order-1 animate-scale-in">
-          <div class="aspect-square rounded-2xl overflow-hidden"
-            style="background: linear-gradient(135deg, var(--accent), #8b5cf6);">
-            <div class="w-full h-full flex items-center justify-center text-8xl">
-              👨‍💻
-            </div>
-          </div>
-        </div>
-
-        <!-- Bio -->
-        <div class="order-1 md:order-2 animate-slide-left">
-          <p class="text-lg mb-6" style="color: var(--text-secondary);">
-            Более 5 лет разрабатываю веб-приложения различной сложности.
-            Начинал с фронтенда, но со временем освоил полный стек технологий.
-          </p>
-
-          <p class="text-lg mb-6" style="color: var(--text-secondary);">
-            Люблю решать сложные задачи и создавать продукты, которые приносят пользу людям.
-            Постоянно изучаю новые технологии и следую лучшим практикам разработки.
-          </p>
-
-          <p class="text-lg mb-8" style="color: var(--text-secondary);">
-            В свободное время вношу вклад в open-source проекты и пишу технические статьи.
-          </p>
-
-          <!-- Skills -->
-          <h3 class="text-xl font-semibold mb-4" style="color: var(--text-primary);">
-            Ключевые навыки
-          </h3>
-
-          <div class="flex flex-wrap gap-3">
-            <span class="skill-tag">JavaScript / TypeScript</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Vue.js</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">Tailwind CSS</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">GraphQL</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    </a>
   </section>
 
   <!-- Portfolio Section -->
@@ -345,6 +288,64 @@
       <p class="text-center mt-8 text-sm" style="color: var(--text-secondary);">
         ← Листайте вправо, чтобы увидеть больше проектов →
       </p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 md:py-32">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-title animate-slide-left">
+        Обо мне
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Avatar / Image -->
+        <div class="order-2 md:order-1 animate-scale-in">
+          <div class="aspect-square rounded-2xl overflow-hidden"
+            style="background: linear-gradient(135deg, var(--accent), #8b5cf6);">
+            <div class="w-full h-full flex items-center justify-center text-8xl">
+              👨‍💻
+            </div>
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <div class="order-1 md:order-2 animate-slide-left">
+          <p class="text-lg mb-6" style="color: var(--text-secondary);">
+            Более 5 лет разрабатываю веб-приложения различной сложности.
+            Начинал с фронтенда, но со временем освоил полный стек технологий.
+          </p>
+
+          <p class="text-lg mb-6" style="color: var(--text-secondary);">
+            Люблю решать сложные задачи и создавать продукты, которые приносят пользу людям.
+            Постоянно изучаю новые технологии и следую лучшим практикам разработки.
+          </p>
+
+          <p class="text-lg mb-8" style="color: var(--text-secondary);">
+            В свободное время вношу вклад в open-source проекты и пишу технические статьи.
+          </p>
+
+          <!-- Skills -->
+          <h3 class="text-xl font-semibold mb-4" style="color: var(--text-primary);">
+            Ключевые навыки
+          </h3>
+
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-tag">JavaScript / TypeScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">GraphQL</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
