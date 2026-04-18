@@ -8,6 +8,7 @@
     --bg-primary-rgb: 255, 255, 255;
     --bg-secondary: #f8f9fa;
     --bg-secondary-rgb: 248, 249, 250;
+    --bg-2: #f2f2f2;
     --text-primary: #1a1a1a;
     --text-secondary: #4b5563;
     --accent: #3b82f6;
@@ -76,8 +77,8 @@
 
   .skill-tag {
     @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-300;
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
+    background-color: var(--bg-2);
+    color: var(--text-secondary);
   }
 
   .skill-tag:hover {
