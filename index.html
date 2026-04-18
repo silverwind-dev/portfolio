@@ -1,30 +1,46 @@
 <!DOCTYPE html>
+<!-- 
+  Основной HTML-документ сайта-портфолио
+  Язык: русский (ru)
+  Поддержка тёмной темы через prefers-color-scheme
+-->
 <html lang="ru">
 
 <head>
+  <!-- Кодировка документа -->
   <meta charset="UTF-8">
+
+  <!-- Адаптивный viewport для мобильных устройств -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Евгений Бухарин | Fullstack Веб-разработчик из Ростова-на-Дону — Портфолио</title>
+
+  <!-- SEO: Заголовок страницы -->
+  <title>Fullstack Веб-разработчик Евгений Бухарин из Ростова-на-Дону — Портфолио</title>
+
+  <!-- SEO: Описание страницы для поисковых систем -->
   <meta name="description"
     content="Портфолио Евгения Бухарина — Fullstack веб-разработчика из Ростова-на-Дону. Создание современных сайтов (WordPress, Tilda, Bitrix), лендингов, ботов, веб-приложений. Интеграция с CRM">
+
+  <!-- SEO: Автор контента -->
   <meta name="author" content="Евгений Бухарин">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Евгений Бухарин | Fullstack Веб-разработчик из Ростова-на-Дону — Портфолио">
+  <!-- ============================================
+       Open Graph / Social Media Meta Tags
+       Для красивого предпросмотра при шеринге в соцсетях
+       ============================================ -->
+  <meta property="og:title" content="Fullstack Веб-разработчик Евгений Бухарин из Ростова-на-Дону — Портфолио">
   <meta property="og:description"
     content="Портфолио Евгения Бухарина — Fullstack веб-разработчика из Ростова-на-Дону. Создание современных сайтов (WordPress, Tilda, Bitrix), лендингов, ботов, веб-приложений. Интеграция с CRM">
-
   <meta property="og:url" content="https://eb-portfolio.vercel.app/">
   <meta property="og:type" content="website">
 
-  <!-- Favicon (placeholder) -->
+  <!-- Favicon: SVG-иконка с эмодзи (плейсхолдер) -->
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
 
-  <!-- Styles -->
+  <!-- Подключённый скомпилированный CSS файл (Tailwind + кастомные стили) -->
   <link rel="stylesheet" href="./dist/output.css">
 
-  <!-- Scripts -->
+  <!-- Отложенный JavaScript скрипт (для мобильного меню и динамического года) -->
   <script src="./src/js/script.js" defer></script>
 </head>
 
@@ -77,17 +93,16 @@
   </div>
 
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+  <section class="relative min-h-screen flex items-center justify-center text-balance overflow-hidden pt-16">
     <div class="hero-bg"></div>
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
       <!-- Avatar -->
-      <img src="src/img/avatar.webp" alt="Евгений Бухарин" 
-        class="w-20 h-20 mx-auto mb-6 rounded-full object-cover animate-scale-in"
-        width="80" height="80" loading="lazy">
+      <img src="src/img/avatar.webp" alt="Евгений Бухарин"
+        class="w-20 h-20 mx-auto mb-6 rounded-full object-cover animate-scale-in" width="80" height="80" loading="lazy">
 
       <p class="text-lg md:text-xl mb-4 animate-fade-up" style="color: var(--accent);">
-        Привет, меня зовут
+        Приветствую, меня зовут
       </p>
 
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up" style="color: var(--text-primary);">
@@ -99,8 +114,9 @@
       </h2>
 
       <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-up" style="color: var(--text-secondary);">
-        Создаю современные веб-приложения с чистым кодом и вниманием к деталям.
-        Специализируюсь на JavaScript, React и Node.js.
+        Создаю современные сайты, лендинги, <span class="whitespace-nowrap">веб-приложения</span> (vue.js), интеграции с
+        CRM, боты.
+        Специализируюсь на&nbsp;WordPress, Tilda, иногда Bitrix или нейросети
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up">
@@ -114,8 +130,8 @@
     </div>
 
     <!-- Scroll indicator -->
-    <a href="#portfolio" class="absolute bottom-8 animate-bounce"
-      style="color: var(--text-secondary);" title="Посмотреть портфолио">
+    <a href="#portfolio" class="absolute bottom-8 animate-bounce" style="color: var(--text-secondary);"
+      title="Посмотреть портфолио">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
       </svg>
@@ -124,7 +140,7 @@
 
   <!-- Portfolio Section -->
   <section id="portfolio" class="py-20 md:py-32" style="background-color: var(--bg-secondary);">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-title animate-fade-up">
         Портфолио
       </h2>
@@ -287,6 +303,154 @@
               </div>
             </div>
           </div>
+
+          <!-- Project 5 -->
+          <div class="slide">
+            <div class="card h-full">
+              <div class="aspect-video rounded-lg mb-6 overflow-hidden"
+                style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">
+                <div class="w-full h-full flex items-center justify-center text-6xl">
+                  💬
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
+                Chat Application
+              </h3>
+
+              <p class="mb-4" style="color: var(--text-secondary);">
+                Мессенджер с поддержкой голосовых вызовов,
+                шифрования сообщений и общего доступа к файлам.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="skill-tag text-xs">React</span>
+                <span class="skill-tag text-xs">Socket.io</span>
+                <span class="skill-tag text-xs">WebRTC</span>
+                <span class="skill-tag text-xs">Express</span>
+              </div>
+
+              <div class="flex gap-4">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  Демо →
+                </a>
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  GitHub →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="slide">
+            <div class="card h-full">
+              <div class="aspect-video rounded-lg mb-6 overflow-hidden"
+                style="background: linear-gradient(135deg, #84cc16, #10b981);">
+                <div class="w-full h-full flex items-center justify-center text-6xl">
+                  🏋️
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
+                Fitness Tracker
+              </h3>
+
+              <p class="mb-4" style="color: var(--text-secondary);">
+                Приложение для отслеживания тренировок и питания
+                с персональными планами и прогресс-трекингом.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="skill-tag text-xs">Vue.js</span>
+                <span class="skill-tag text-xs">Firebase</span>
+                <span class="skill-tag text-xs">Chart.js</span>
+                <span class="skill-tag text-xs">PWA</span>
+              </div>
+
+              <div class="flex gap-4">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  Демо →
+                </a>
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  GitHub →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7 -->
+          <div class="slide">
+            <div class="card h-full">
+              <div class="aspect-video rounded-lg mb-6 overflow-hidden"
+                style="background: linear-gradient(135deg, #f43f5e, #ec4899);">
+                <div class="w-full h-full flex items-center justify-center text-6xl">
+                  📰
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
+                News Platform
+              </h3>
+
+              <p class="mb-4" style="color: var(--text-secondary);">
+                CMS для новостного портала с персонализацией
+                контента, комментариями и системой тегов.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="skill-tag text-xs">Next.js</span>
+                <span class="skill-tag text-xs">Strapi</span>
+                <span class="skill-tag text-xs">PostgreSQL</span>
+                <span class="skill-tag text-xs">Algolia</span>
+              </div>
+
+              <div class="flex gap-4">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  Демо →
+                </a>
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  GitHub →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 8 -->
+          <div class="slide">
+            <div class="card h-full">
+              <div class="aspect-video rounded-lg mb-6 overflow-hidden"
+                style="background: linear-gradient(135deg, #6366f1, #a855f7);">
+                <div class="w-full h-full flex items-center justify-center text-6xl">
+                  🎮
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
+                Gaming Platform
+              </h3>
+
+              <p class="mb-4" style="color: var(--text-secondary);">
+                Платформа для киберспортивных турниров
+                с системой рейтингов, матчмейкингом и статистикой.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="skill-tag text-xs">TypeScript</span>
+                <span class="skill-tag text-xs">Node.js</span>
+                <span class="skill-tag text-xs">Redis</span>
+                <span class="skill-tag text-xs">Socket.io</span>
+              </div>
+
+              <div class="flex gap-4">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  Демо →
+                </a>
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                  GitHub →
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <button class="slider-btn slider-btn-next" aria-label="Следующий проект">
@@ -294,7 +458,7 @@
         </button>
       </div>
       <p class="text-center mt-8 text-sm" style="color: var(--text-secondary);">
-        ← Листайте вправо, чтобы увидеть больше проектов →
+        Листайте ← → для просмотра всех проектов
       </p>
     </div>
   </section>
@@ -306,28 +470,24 @@
         Обо мне
       </h2>
 
-      <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="grid md:grid-cols-[30%_70%] gap-12 items-center">
         <!-- Avatar / Image -->
-        <div class="order-2 md:order-1 animate-scale-in">
-          <img src="src/img/avatar.webp" alt="Евгений Бухарин" 
-            class="w-full h-full object-cover"
-            width="512" height="512" loading="lazy">
+        <div class="animate-scale-in rounded-full overflow-hidden max-w-xs mx-auto md:mx-0">
+          <img src="src/img/avatar.webp" alt="Евгений Бухарин" class="w-full h-full object-cover" width="512"
+            height="512" loading="lazy">
         </div>
 
         <!-- Bio -->
-        <div class="order-1 md:order-2 animate-fade-up">
+        <div class="animate-fade-up text-balance">
           <p class="text-lg mb-6" style="color: var(--text-secondary);">
-            Более 5 лет разрабатываю веб-приложения различной сложности.
-            Начинал с фронтенда, но со временем освоил полный стек технологий.
+            Более 12 лет создаю сайты, лендинги, веб-приложения различной сложности.
+            WordPress, Tilda, Bitrix, нейросети.
           </p>
 
           <p class="text-lg mb-6" style="color: var(--text-secondary);">
-            Люблю решать сложные задачи и создавать продукты, которые приносят пользу людям.
-            Постоянно изучаю новые технологии и следую лучшим практикам разработки.
-          </p>
-
-          <p class="text-lg mb-8" style="color: var(--text-secondary);">
-            В свободное время вношу вклад в open-source проекты и пишу технические статьи.
+            Делаю вёрстку по готовым макетам из Figma, без макетов, а так же при помощи нейросетей.
+            Если нет макетов, то предложу вам контакты профессионального веб-дизайнера, который поможет воплотить любую
+            вашу задумку.
           </p>
 
           <!-- Skills -->
@@ -336,18 +496,19 @@
           </h3>
 
           <div class="flex flex-wrap gap-3">
-            <span class="skill-tag">JavaScript / TypeScript</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Vue.js</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Git</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
             <span class="skill-tag">Tailwind CSS</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">Bootstrap CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">WordPress</span>
+            <span class="skill-tag">Tilda</span>
+            <span class="skill-tag">AI</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Docker</span>
           </div>
         </div>
       </div>
@@ -366,8 +527,36 @@
       </p>
 
       <div class="grid md:grid-cols-3 gap-8">
+        <!-- Telegram -->
+        <a href="https://t.me/schtaufenberg" target="_blank" rel="noopener noreferrer"
+          class="card text-center group animate-scale-in">
+          <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <img class="mx-auto" loading="lazy" width="40" height="40" src="./src/img/icon-tg.svg" alt="Telegram">
+          </div>
+          <h3 class="text-lg font-semibold mb-2" style="color: var(--text-primary);">
+            Telegram
+          </h3>
+          <p style="color: var(--accent);">
+            @schtaufenberg
+          </p>
+        </a>
+
+        <!-- ВКонтакте -->
+        <a href="https://vk.com/sakralbar" target="_blank" rel="noopener noreferrer"
+          class="card text-center group animate-scale-in">
+          <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <img src="./src/img/vk.svg" alt="ВКонтакте" class="w-10 h-10 mx-auto" style="fill: #0077FF;">
+          </div>
+          <h3 class="text-lg font-semibold mb-2" style="color: var(--text-primary);">
+            ВКонтакте
+          </h3>
+          <p style="color: var(--accent);">
+            vk.com/sakralbar
+          </p>
+        </a>
+
         <!-- Email -->
-        <a href="mailto:evgeny.bukharin@example.com" class="card text-center group animate-scale-in">
+        <a href="mailto:schtaufenberg@yandex.ru" class="card text-center group animate-scale-in">
           <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
             📧
           </div>
@@ -375,41 +564,14 @@
             Email
           </h3>
           <p style="color: var(--accent);">
-            evgeny.bukharin@example.com
+            schtaufenberg@yandex.ru
           </p>
         </a>
 
-        <!-- Telegram -->
-        <a href="https://t.me/evgeny_bukharin" target="_blank" rel="noopener noreferrer"
-          class="card text-center group animate-scale-in">
-          <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-            ✈️
-          </div>
-          <h3 class="text-lg font-semibold mb-2" style="color: var(--text-primary);">
-            Telegram
-          </h3>
-          <p style="color: var(--accent);">
-            @evgeny_bukharin
-          </p>
-        </a>
-
-        <!-- GitHub -->
-        <a href="https://github.com/evgeny-bukharin" target="_blank" rel="noopener noreferrer"
-          class="card text-center group animate-scale-in">
-          <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-            🐙
-          </div>
-          <h3 class="text-lg font-semibold mb-2" style="color: var(--text-primary);">
-            GitHub
-          </h3>
-          <p style="color: var(--accent);">
-            github.com/evgeny-bukharin
-          </p>
-        </a>
       </div>
 
       <!-- Additional links -->
-      <div class="flex justify-center gap-8 mt-12 animate-fade-up">
+      <!-- <div class="flex justify-center gap-8 mt-12 animate-fade-up">
         <a href="https://linkedin.com/in/evgeny-bukharin" target="_blank" rel="noopener noreferrer"
           class="font-medium hover:underline" style="color: var(--text-secondary);">
           LinkedIn
@@ -421,7 +583,7 @@
           Блог
         </a>
       </div>
-    </div>
+    </div> -->
   </section>
 
   <!-- Footer -->
@@ -429,7 +591,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-sm" style="color: var(--text-secondary);">
-          © 2024 Евгений Бухарин. Все права защищены.
+          © <span class="js-year">2025</span> Евгений Бухарин. Все права защищены.
         </p>
 
         <nav class="flex gap-6">
