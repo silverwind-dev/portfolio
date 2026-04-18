@@ -85,15 +85,7 @@
     color: white;
   }
 
-  .card {
-    @apply rounded-xl p-6 transition-all duration-300;
-    background-color: var(--bg-secondary);
-  }
 
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  }
 
   .nav-link {
     @apply relative font-medium transition-colors duration-300;
@@ -241,15 +233,15 @@
 }
 
 .slider {
-  display: flex;
-  overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  gap: 1rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  overscroll-behavior-x: contain;
   -webkit-overflow-scrolling: touch;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
 }
 
 .slider-wrapper {
