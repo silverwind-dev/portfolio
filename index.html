@@ -13,25 +13,41 @@
   <!-- Адаптивный viewport для мобильных устройств -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO: Заголовок страницы -->
-  <title>Fullstack Веб-разработчик Евгений Бухарин из Ростова-на-Дону — Портфолио</title>
+  <!-- SEO: Заголовок страницы (оптимизирован) -->
+  <title>Евгений Бухарин — Fullstack Разработчик | Сайты, Веб-приложения, WordPress</title>
 
-  <!-- SEO: Описание страницы для поисковых систем -->
+  <!-- SEO: Описание страницы для поисковых систем (оптимизировано) -->
   <meta name="description"
-    content="Портфолио Евгения Бухарина — Fullstack веб-разработчика из Ростова-на-Дону. Создание современных сайтов (WordPress, Tilda, Bitrix), лендингов, ботов, веб-приложений. Интеграция с CRM">
+    content="Евгений Бухарин — Fullstack разработчик из Ростова-на-Дону. Создание сайтов на WordPress, Tilda, Bitrix, веб-приложения на Vue.js, интеграции с CRM, Telegram-боты.">
 
   <!-- SEO: Автор контента -->
   <meta name="author" content="Евгений Бухарин">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://eb-portfolio.vercel.app/">
 
   <!-- ============================================
        Open Graph / Social Media Meta Tags
        Для красивого предпросмотра при шеринге в соцсетях
        ============================================ -->
-  <meta property="og:title" content="Fullstack Веб-разработчик Евгений Бухарин из Ростова-на-Дону — Портфолио">
+  <meta property="og:title" content="Евгений Бухарин — Fullstack Разработчик">
   <meta property="og:description"
-    content="Портфолио Евгения Бухарина — Fullstack веб-разработчика из Ростова-на-Дону. Создание современных сайтов (WordPress, Tilda, Bitrix), лендингов, ботов, веб-приложений. Интеграция с CRM">
+    content="Создаю современные сайты, веб-приложения, интеграции с CRM. WordPress, Vue.js, Tilda, Telegram-боты.">
   <meta property="og:url" content="https://eb-portfolio.vercel.app/">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Евгений Бухарин — Fullstack Разработчик">
+  <meta name="twitter:description"
+    content="Создаю современные сайты, веб-приложения, интеграции с CRM. WordPress, Vue.js, Tilda, Telegram-боты.">
+
+  <!-- ============================================
+       Preload Critical Resources
+       ============================================ -->
+  <link rel="preload" href="./dist/output.css" as="style">
+  <link rel="preload" href="./src/img/avatar.webp" as="image">
 
   <!-- Favicon: SVG-иконка с эмодзи (плейсхолдер) -->
   <link rel="icon" type="image/svg+xml"
@@ -63,6 +79,46 @@
         },
       });
     });
+  </script>
+
+  <!-- ============================================
+       Structured Data (JSON-LD)
+       Для улучшения SEO и богатых сниппетов
+       ============================================ -->
+  <!-- Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Евгений Бухарин",
+    "jobTitle": "Fullstack Developer",
+    "url": "https://eb-portfolio.vercel.app",
+    "sameAs": [
+      "https://t.me/schtaufenberg",
+      "https://vk.com/sakralbar"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ростов-на-Дону",
+      "addressCountry": "RU"
+    }
+  }
+  </script>
+
+  <!-- ProfessionalService Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Веб-разработка Евгений Бухарин",
+    "description": "Создание сайтов, лендингов, веб-приложений, интеграции с CRM, Telegram-боты",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ростов-на-Дону",
+      "addressCountry": "RU"
+    }
+  }
   </script>
 </head>
 
@@ -132,12 +188,12 @@
       </h1>
 
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 animate-fade-up text-gradient">
-        Fullstack Developer
+        Fullstack Разработчик
       </h2>
 
       <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-up" style="color: var(--text-secondary);">
-        Создаю современные сайты, лендинги, <span class="whitespace-nowrap">веб-приложения</span> (vue.js), интеграции с
-        CRM, боты.
+        Создаю современные сайты, лендинги, <span class="whitespace-nowrap">веб-приложения</span> (Vue.js), интеграции с
+        CRM, Telegram-боты.
         Специализируюсь на&nbsp;WordPress, Tilda, иногда Bitrix или нейросети
       </p>
 
@@ -182,11 +238,11 @@
           <!-- Project 1 -->
           <div class="slide">
             <div
-              class="flex flex-col rounded-xl p-6 transition-all duration-300 border border-neutral-200 shadow-lg hover:-translate-y-1.5 hover:shadow-xl h-full"
+              class="flex flex-col rounded-xl p-6 transition-all duration-300 shadow-lg hover:-translate-y-1.5 hover:shadow-xl h-full"
               style="background-color: var(--bg-secondary);">
               <div class="aspect-[4/3] rounded-lg mb-6 overflow-hidden">
                 <a data-fancybox="gallery-project1" href="./src/img/portfolio/one-qr/1.webp">
-                  <img src="./src/img/portfolio/one-qr/1.webp" alt="one-qr.ru"
+                  <img src="./src/img/portfolio/one-qr/1-sm.webp" alt="one-qr.ru"
                     class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy"
                     width="651" height="488">
                 </a>
@@ -225,7 +281,7 @@
           <!-- Project 2 -->
           <div class="slide">
             <div
-              class="flex flex-col rounded-xl p-6 transition-all duration-300 border border-neutral-200 shadow-lg hover:-translate-y-1.5 hover:shadow-xl h-full"
+              class="flex flex-col rounded-xl p-6 transition-all duration-300 shadow-lg hover:-translate-y-1.5 hover:shadow-xl h-full"
               style="background-color: var(--bg-secondary);">
               <div class="aspect-[4/3] rounded-lg mb-6 overflow-hidden">
                 <a data-fancybox="gallery-project2" href="./src/img/portfolio/na-crm/1.webp">
@@ -309,10 +365,10 @@
               </div>
 
               <div class="flex gap-4">
-                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);" aria-label="Task Management App Демо">
                   Демо →
                 </a>
-                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);" aria-label="Task Management App GitHub">
                   GitHub →
                 </a>
               </div>
@@ -362,10 +418,10 @@
               </div>
 
               <div class="flex gap-4">
-                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);" aria-label="Design System Демо">
                   Демо →
                 </a>
-                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);" aria-label="Design System GitHub">
                   GitHub →
                 </a>
               </div>
@@ -415,10 +471,10 @@
               </div>
 
               <div class="flex gap-4">
-                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);" aria-label="Chat Application Демо">
                   Демо →
                 </a>
-                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);" aria-label="Chat Application GitHub">
                   GitHub →
                 </a>
               </div>
@@ -468,10 +524,10 @@
               </div>
 
               <div class="flex gap-4">
-                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);" aria-label="Fitness Tracker Демо">
                   Демо →
                 </a>
-                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);" aria-label="Fitness Tracker GitHub">
                   GitHub →
                 </a>
               </div>
@@ -521,10 +577,10 @@
               </div>
 
               <div class="flex gap-4">
-                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);" aria-label="News Platform Демо">
                   Демо →
                 </a>
-                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);" aria-label="News Platform GitHub">
                   GitHub →
                 </a>
               </div>
@@ -574,10 +630,10 @@
               </div>
 
               <div class="flex gap-4">
-                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);" aria-label="Gaming Platform Демо">
                   Демо →
                 </a>
-                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);">
+                <a href="#" class="text-sm font-medium hover:underline" style="color: var(--accent);" aria-label="Gaming Platform GitHub">
                   GitHub →
                 </a>
               </div>

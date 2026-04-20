@@ -1,0 +1,12 @@
+# robots.txt для портфолио Евгения Бухарина
+# https://eb-portfolio.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Запрет на индексацию служебных директорий
+Disallow: /node_modules/
+Disallow: /src/
+
+# Ссылка на sitemap (опционально, можно добавить позже)
+# Sitemap: https://eb-portfolio.vercel.app/sitemap.xml

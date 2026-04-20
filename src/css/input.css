@@ -25,12 +25,13 @@
       --bg-primary-rgb: 17, 24, 39;
       --bg-secondary: #1f2937;
       --bg-secondary-rgb: 31, 41, 55;
+      --bg-2: #2d3a4b;
       --text-primary: #f9fafb;
       --text-secondary: #9ca3af;
       --accent: #60a5fa;
       --accent-hover: #3b82f6;
       --slider-btn-bg: rgba(31, 41, 55, 0.85);
-      --slider-btn-bg-hover: rgba(255, 255, 255, 0.95);
+      --slider-btn-bg-hover: #1f2937;
       --slider-btn-border: rgba(255, 255, 255, 0.18);
       --slider-btn-shadow: rgba(0, 0, 0, 0.3);
     }
