@@ -258,7 +258,7 @@
 }
 
 .slide {
-  flex: 0 0 100%;
+  flex: 0 0 90%;
   width: 100%;
   scroll-snap-align: start;
   box-sizing: border-box;
