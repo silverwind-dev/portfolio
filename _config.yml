@@ -1,0 +1,40 @@
+# Конфигурация для GitHub Pages (Jekyll)
+# Отключаем обработку Jekyll для чистого статического сайта
+include: []
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - tailwind.config.js
+  - src/
+  - .vscode/
+  - .gitignore
+  - README.md
+  - KODA.md
+  - .codeassistantignore
+
+# Настройки сайта
+title: "Портфолио Евгения Бухарина"
+description: "Fullstack разработчик из Ростова-на-Дону"
+baseurl: ""
+url: "https://eb-portfolio.github.io" # замените на ваш username
+
+# Отключаем обработку Jekyll для файлов, начинающихся с подчёркивания
+include: [".well-known"]
+
+# Настройки плагинов (пусто, так как плагины не используются)
+plugins: []
+
+# Настройки сборки
+markdown: kramdown
+highlighter: rouge
+
+# Кодировка
+encoding: "utf-8"
+
+# Время
+timezone: "Europe/Moscow"
+
+# Безопасный режим (для GitHub Pages)
+safe: true
