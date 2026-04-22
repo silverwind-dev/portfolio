@@ -60,8 +60,8 @@
   <!-- Подключённый скомпилированный CSS файл (Tailwind + кастомные стили) -->
   <link rel="stylesheet" href="./dist/output.css?v=1955">
 
-  <!-- Fancybox CSS -->
-  <link rel="stylesheet" href="./vendor/fancybox/fancybox.css?v=1955">
+  <!-- Fancybox CSS (ленивая загрузка) -->
+  <link rel="stylesheet" href="./vendor/fancybox/fancybox.css?v=1955" media="print" onload="this.media='all'">
 
   <!-- Отложенный JavaScript скрипт (для мобильного меню и динамического года) -->
   <script src="./src/js/script.js?v=1955" defer></script>
@@ -351,7 +351,7 @@
               </div>
 
               <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary);">
-                telegram-бот ослеживания динамики количества заявок в AmoCrm
+                telegram-бот отслеживания динамики количества заявок в AmoCrm
               </h3>
 
               <p class="mb-4" style="color: var(--text-secondary);">
